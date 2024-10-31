@@ -41,3 +41,24 @@ Now let's try the function and see how the plot changes.
 ln_pressure <- ln_trans(pressure)
 plot(ln_pressure)
 ```
+
+## Define New Data Transformation Function
+
+A New Data Transformation Function is defined below. It applies square root transformation to the second column in a dataset.
+
+```{r new function_definition}
+
+sqrt_trans <- function(data) {
+  #transform second column to ln_data
+  data[2] <- sqrt(data[2])
+  return(data)
+}
+
+```
+
+We can also test the new function with the pressure dataset.
+
+```{r new function test}
+sqrt_pressure <- sqrt_trans(pressure)
+plot(sqrt_pressure)
+```
