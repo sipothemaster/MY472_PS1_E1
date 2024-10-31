@@ -385,10 +385,10 @@ plot(ln_pressure)</code></pre>
 <h2>Define New Data Transformation Function</h2>
 <p>A New Data Transformation Function is defined below. It applies
 square root transformation to the second column in a dataset.</p>
-<pre class="r"><code>sqrt_trans &lt;- function(data) {
-  #transform second column to ln_data
-  data[2] &lt;- sqrt(data[2])
-  return(data)
+<pre class="r"><code>sqrt_trans &lt;- function(new_data) {
+  #transform second column to sqrt_data
+  new_data[2] &lt;- sqrt(new_data[2])
+  return(new_data)
 }</code></pre>
 <p>We can also test the new function with the pressure dataset.</p>
 <pre class="r"><code>sqrt_pressure &lt;- sqrt_trans(pressure)
