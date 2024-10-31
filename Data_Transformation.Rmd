@@ -48,10 +48,10 @@ A New Data Transformation Function is defined below. It applies square root tran
 
 ```{r new function_definition}
 
-sqrt_trans <- function(data) {
-  #transform second column to ln_data
-  data[2] <- sqrt(data[2])
-  return(data)
+sqrt_trans <- function(new_data) {
+  #transform second column to sqrt_data
+  new_data[2] <- sqrt(new_data[2])
+  return(new_data)
 }
 
 ```
