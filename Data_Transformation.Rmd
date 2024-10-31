@@ -1,0 +1,43 @@
+---
+title: "Data_Transformation"
+author: "Chenrui_Xiao"
+date: "2024-10-31"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Define Data Transformation Function
+
+A Data Transformation Function is defined below. It applies logarithmic transformation to the second column in a dataset.
+
+```{r function_definition}
+
+ln_trans <- function(data) {
+  #transform second column to ln_data
+  data[2] <- log(data[2])
+  return(data)
+}
+
+```
+
+## Function Test
+
+We can test the function using prssure, a built-in R dataset. It is a dataset that shows the relationship between pressure and temperature.
+
+First, we plot the dataset.
+
+```{r prssure}
+plot(pressure)
+
+```
+
+Looks like it is suitable for ln_trans!
+Now let's try the function and see how the plot changes.
+
+```{r function test}
+ln_pressure <- ln_trans(pressure)
+plot(ln_pressure)
+```
